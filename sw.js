@@ -5,7 +5,7 @@
    - Fonts + PeerJS library (cross-origin): cached after first load.
    - PeerJS signalling / WebRTC traffic is never touched.
    Bump VERSION whenever you ship a new index.html. */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = 'bomb-battle-' + VERSION;
 const SHELL = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 const CDN = ['https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js'];
