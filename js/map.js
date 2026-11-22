@@ -186,8 +186,8 @@ const MDESC=['Sunny meadow with trees, rocks and small wooden crate clusters aro
  'Sticky jelly slows you down. Lollipops and candy blocks ring a wide open centre.',
  'The traditional grid of metal barriers and machinery around an open central arena.',
  'Mossy ruins, roots and vines. Mud slows you, and bushy corners hide ambushes.'];
-function mapInit1(){MAPS.forEach((m,i)=>{const E2=MENC[i];m.d=MDESC[i]+'<br><small class="men">Enemies: '+[...new Set(E2.pool)].map(t=>EN[t][0]+EN[t].slice(1).toLowerCase().replace(/ (\w)/g,(a,b)=>' '+b.toUpperCase())).join(', ')+' · Boss: '+BN[E2.boss]+'</small>'});}cards($('mc'),MAPS,'map',m=>`linear-gradient(135deg,${m.f},${m.w} 50%,${m.a})`);sel();
-
+function mapInit1(){MAPS.forEach((m,i)=>{const E2=MENC[i];m.d=MDESC[i]+'<br><small class="men">Enemies: '+[...new Set(E2.pool)].map(t=>EN[t][0]+EN[t].slice(1).toLowerCase().replace(/ (\w)/g,(a,b)=>' '+b.toUpperCase())).join(', ')+' · Boss: '+BN[E2.boss]+'</small>'});}
+function mapInit2(){cards($('mc'),MAPS,'map',m=>`linear-gradient(135deg,${m.f},${m.w} 50%,${m.a})`);sel();}
 /* [b4 · 1366-1428] */
 /* =====================================================================
    BOMB BATTLE — WORLD ART (tiles, hazard pads, hazard warnings)
