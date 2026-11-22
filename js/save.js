@@ -27,4 +27,5 @@ function chApply(o){if(!o)return;if(Array.isArray(o.sel))for(let i=0;i<4;i++)if(
 const _lsSetRPG=LS.set;LS.set=function(k,v){const r=_lsSetRPG.call(LS,k,v);if(k==='bbSet'&&!SAVE.ro&&SAVE.v===2)chWrite();return r};
 coreLoadSettings();
 coreInit1();
+mapInit1();
 
