@@ -15,8 +15,7 @@ let CM=0,ST=[],ws=[];const S={sk:[8,9,10,11],map:0,rm:1,mode:0,bo:3,mv:.5,sv:.7,
 const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const LSA=k=>{const a=LS.get(k,[]);return Array.isArray(a)?a.filter(Number.isInteger):[]};
 /* [b2 · 336-336] */
-(function(){let o=LS.get('bbSet',{});if(!o||typeof o!='object')o={};for(const k in S)if(o[k]!==undefined&&typeof o[k]==typeof S[k])S[k]=o[k];if(!Array.isArray(S.sk))S.sk=SKD.slice();S.sk=SKD.map((d,i)=>isUnl(S.sk[i])?S.sk[i]:d);if(![2,3,4].includes(S.room))S.room=4;if(!(S.map<MAPS.length))S.map=0;if(!(S.mode<MODES.length))S.mode=0;if(S.np!=1)S.np=2;if(!(Number.isInteger(S.gk)&&S.gk>=0&&isUnl(S.gk)))S.gk=-1;if(ECO_MIG)LS.set('bbSet',S)})();
-/* [b2 · 381-382] */
+function coreLoadSettings(){let o=LS.get('bbSet',{});if(!o||typeof o!='object')o={};for(const k in S)if(o[k]!==undefined&&typeof o[k]==typeof S[k])S[k]=o[k];if(!Array.isArray(S.sk))S.sk=SKD.slice();S.sk=SKD.map((d,i)=>isUnl(S.sk[i])?S.sk[i]:d);if(![2,3,4].includes(S.room))S.room=4;if(!(S.map<MAPS.length))S.map=0;if(!(S.mode<MODES.length))S.mode=0;if(S.np!=1)S.np=2;if(!(Number.isInteger(S.gk)&&S.gk>=0&&isUnl(S.gk)))S.gk=-1;if(ECO_MIG)LS.set('bbSet',S)}
 const saveS=()=>LS.set('bbSet',S);
 let dmgs=[],dmq=[],tox=[],msl=[],fd=new Uint8Array(W*H),fk=[],puCD=0,lastSp=[],fdt=1/60;
 /* [b2 · 387-388] */
