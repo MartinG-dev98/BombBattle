@@ -28,4 +28,5 @@ const _lsSetRPG=LS.set;LS.set=function(k,v){const r=_lsSetRPG.call(LS,k,v);if(k=
 coreLoadSettings();
 coreInit1();
 mapInit1();
+mapInit2();
 
