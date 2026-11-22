@@ -87,4 +87,5 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState=='
 addEventListener('pagehide',releaseAll);
 document.querySelectorAll('.tb').forEach(b=>b.addEventListener('lostpointercapture',()=>{if(b.classList.contains('on')){b.classList.remove('on');press(b.dataset.a,0)}}));
 (function(){const pad=$('pad');if(pad)pad.addEventListener('lostpointercapture',()=>{const kn=$('knob');if(kn)kn.style.transform='';['l','r','u','d'].forEach(a=>press(a,0))})})();
-tgUI();
+function coreInit1(){tgUI()}
+
