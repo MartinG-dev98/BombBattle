@@ -10,7 +10,7 @@
  * instead of the copy they cached last week.
  */
 
-const CACHE_VERSION = 'bombbattle-v7.3';
+const CACHE_VERSION = 'bombbattle-v7.4';
 const CACHE_NAME = CACHE_VERSION;
 
 const PRECACHE = [
